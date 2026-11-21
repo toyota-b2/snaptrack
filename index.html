@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="SNAPTRACK public profile lookup demo">
+  <title>SNAPTRACK — Profile Lookup</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Snaptrack home"><span class="brand-mark">S</span> SNAPTRACK</a>
+    <span class="top-status"><i></i> PUBLIC LOOKUP</span>
+  </header>
+
+  <main class="shell">
+    <section class="hero">
+      <div class="eyebrow"><span></span> SOCIAL PROFILE EXPLORER</div>
+      <h1>Find a <em>Snapchat</em><br>profile.</h1>
+      <p class="intro">Look up a username and review information that is publicly available or supplied with permission.</p>
+
+      <form id="searchForm" class="searchbar">
+        <span class="at">@</span>
+        <input id="usernameInput" name="username" value="antonisssb"
+          placeholder="Enter Snapchat username" autocomplete="off"
+          maxlength="64" aria-label="Snapchat username">
+        <button type="submit"><span>Search</span><b>↗</b></button>
+      </form>
+      <p class="microcopy">No Snapchat password required · No private account access</p>
+      <p id="searchMessage" class="search-message" role="status"></p>
+    </section>
+
+    <section id="result" class="result" aria-live="polite">
+      <div class="section-heading">
+        <div><div class="eyebrow">LOOKUP RESULT</div><h2>Profile overview</h2></div>
+        <span class="demo-pill"><i></i> LOOKUP DEMO</span>
+      </div>
+
+      <article class="profile-card">
+        <div class="profile-main">
+          <div class="avatar" id="avatar">A</div>
+          <div class="identity">
+            <span class="verified-label">USERNAME SEARCH</span>
+            <h3 id="displayUsername">@antonisssb</h3>
+            <p>Snapchat profile lookup</p>
+          </div>
+          <span class="public-badge">Public data only</span>
+        </div>
+        <div class="notice">
+          <span class="notice-icon">ⓘ</span>
+          <p>This interface does not connect to Snapchat. A username search alone cannot confirm that an account exists or reveal private account information.</p>
+        </div>
+      </article>
+
+      <div class="stats-grid">
+        <article class="stat-card">
+          <div class="stat-top"><span>SNAPSCORE</span><span class="stat-icon">✳</span></div>
+          <strong>Unavailable</strong>
+          <small>Not exposed through a public lookup</small>
+        </article>
+        <article class="stat-card">
+          <div class="stat-top"><span>FRIENDS / FOLLOWERS</span><span class="stat-icon">◎</span></div>
+          <strong>Unavailable</strong>
+          <small>Private or not publicly provided</small>
+        </article>
+        <article class="stat-card">
+          <div class="stat-top"><span>LAST ACTIVE</span><span class="stat-icon">◷</span></div>
+          <strong>Unavailable</strong>
+          <small>Hidden activity is not accessible</small>
+        </article>
+      </div>
+
+      <article class="details-card">
+        <div class="details-title"><div><div class="eyebrow">DATA TRANSPARENCY</div><h3>What can be shown?</h3></div><span class="shield">◇</span></div>
+        <div class="data-row"><span class="dot green"></span><div><b>Username entered</b><small>Provided by you</small></div><span class="value" id="enteredValue">antonisssb</span></div>
+        <div class="data-row"><span class="dot amber"></span><div><b>Public profile details</b><small>Only if available from an authorized public source</small></div><span class="value muted-value">Not connected</span></div>
+        <div class="data-row"><span class="dot red"></span><div><b>Private activity &amp; Snapscore</b><small>Not available through this demo</small></div><span class="value muted-value">Unavailable</span></div>
+      </article>
+      <p class="disclaimer">SNAPTRACK is an independent demo project and is not affiliated with or endorsed by Snap Inc.</p>
+    </section>
+    <footer><span>SNAPTRACK <b>v1.0</b></span><span>BUILT FOR THE OPEN WEB</span></footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
